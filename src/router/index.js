@@ -6,6 +6,7 @@ import organ from '@/views/organization'
 import archives from '@/views/archives'
 import newlyAdded from '@/views/newlyAdded'
 import category from '@/views/newlyAdded/pages/category.vue'
+import weekly from '@/views/newlyAdded/pages/weekly.vue'
 import names from '@/views/newlyAdded/pages/names.vue'
 import source from '@/views/newlyAdded/pages/source.vue'
 import all from '@/views/subway/numes/pages/all.vue'
@@ -33,6 +34,11 @@ const routes = [{
     path: '/archives',
     name: 'archives',
     component: archives
+  },
+  {
+    path: '/weekly',
+    name: 'weekly',
+    component: weekly
   },
   {
     path: '/newlyAdded',

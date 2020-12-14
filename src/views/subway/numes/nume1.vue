@@ -27,9 +27,9 @@
     </main>
     <footer>
        <div class="down">
-         <li> 日常检查 </li>
+         <li @click="inspection"> 日常检查 </li>
          <li @click="tonewly" class="middle"> <span class="middle_c">+</span> </li>
-         <li> 吊装作业 </li>
+         <li @click="operation"> 吊装作业 </li>
        </div>
     </footer>
   </div>
@@ -51,6 +51,12 @@ export default {
     }
   },
   methods: {
+    operation(){
+     this.$router.push({name:'operation'})
+    },
+    inspection(){
+    this.$router.push({name:'weekly'})
+    },
     taps(e){
       this.tapId=e
       this.$router.push({name:e})

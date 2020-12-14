@@ -8,6 +8,8 @@ import newlyAdded from '@/views/newlyAdded'
 import category from '@/views/newlyAdded/pages/category.vue'
 import names from '@/views/newlyAdded/pages/names.vue'
 import source from '@/views/newlyAdded/pages/source.vue'
+import chanquan from '@/views/newlyAdded/pages/chanquan.vue'
+
 import all from '@/views/subway/numes/pages/all.vue'
 import daishenhe from '@/views/subway/numes/pages/daishenhe.vue'
 import weishenbao from '@/views/subway/numes/pages/weishenbao.vue'
@@ -48,6 +50,11 @@ const routes = [{
     path: '/source',
     name: 'source',
     component: source
+  },
+  {
+    path: '/chanquan',
+    name: 'chanquan',
+    component: chanquan
   },
   {
     path: '/names',

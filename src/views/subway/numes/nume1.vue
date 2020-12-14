@@ -35,19 +35,11 @@
       <router-view />
     </main>
     <footer>
-<<<<<<< HEAD
-       <div class="down">
-         <li @click="inspection"> 日常检查 </li>
-         <li @click="tonewly" class="middle"> <span class="middle_c">+</span> </li>
-         <li @click="hoisting"> 吊装作业 </li>
-       </div>
-=======
       <div class="down">
-        <li>日常检查</li>
+        <li @click="inspection">日常检查</li>
         <li @click="tonewly" class="middle"><span class="middle_c">+</span></li>
-        <li>吊装作业</li>
+        <li @click="hoisting">吊装作业</li>
       </div>
->>>>>>> fd8fa42fa87ec0ef8b13c5945ae02d5cfdc17a92
     </footer>
     <div class="showFliter" v-if="isShowFilter">
       <div class="content">
@@ -163,15 +155,14 @@ export default {
     }
   },
   methods: {
-<<<<<<< HEAD
 
-    inspection(){
-    this.$router.push({name:'weekly'})
+    inspection () {
+      this.$router.push({ name: 'weekly' })
     },
-    taps(e){
-      this.tapId=e
-      this.$router.push({name:e})
-=======
+    taps (e) {
+      this.tapId = e
+      this.$router.push({ name: e })
+    },
     // 点击选中高亮
     pithOn (name) {
       // 未完成
@@ -196,9 +187,7 @@ export default {
     taps (e) {
       this.tapId = e
       this.$router.push({ name: e })
->>>>>>> fd8fa42fa87ec0ef8b13c5945ae02d5cfdc17a92
     },
-
     tonewly () {
       this.$router.push({ name: 'newlyAdded' })
     },
@@ -209,15 +198,11 @@ export default {
     },
     toOrganization () {
       this.$router.push({ name: 'organ' })
-<<<<<<< HEAD
-      
+
     },
     // 点击跳转吊装作业
     hoisting(){
       this.$router.push({ name: 'hoisting' })
-=======
-
->>>>>>> fd8fa42fa87ec0ef8b13c5945ae02d5cfdc17a92
     }
 
   },

@@ -35,11 +35,11 @@
       <router-view />
     </main>
     <footer>
-      <div class="down">
-        <li @click="inspection">日常检查</li>
-        <li @click="tonewly" class="middle"><span class="middle_c">+</span></li>
-        <li @click="hoisting">吊装作业</li>
-      </div>
+       <div class="down">
+         <li @click="inspection"> 日常检查 </li>
+         <li @click="tonewly" class="middle"> <span class="middle_c">+</span> </li>
+         <li @click="hoisting"> 吊装作业 </li>
+       </div>
     </footer>
     <div class="showFliter" v-if="isShowFilter">
       <div class="content">
@@ -156,6 +156,14 @@ export default {
   },
   methods: {
 
+    inspection(){
+    this.$router.push({name:'weekly'})
+    },
+    taps(e){
+      this.tapId=e
+      this.$router.push({name:e})
+    },
+
     inspection () {
       this.$router.push({ name: 'weekly' })
     },
@@ -198,7 +206,7 @@ export default {
     },
     toOrganization () {
       this.$router.push({ name: 'organ' })
-
+      
     },
     // 点击跳转吊装作业
     hoisting(){

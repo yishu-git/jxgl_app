@@ -12,7 +12,8 @@
         <p :class="cut==1? 'cuts':''" @click="cutclick(1)" >周任务</p>
       </div>
     </header>
-    <main>   <Week v-show="cut==0" /> </main>
+    <main>   <Week v-show="cut==0" /> 
+    <Jinricao  v-show="cut==1" /></main>
     <footer><span>+</span>日常检查记录</footer>
   </div>
 </template>
@@ -20,9 +21,11 @@
 
 <script>
 import Week from '@/components/Week.vue'
+import Jinricao from '@/components/Jinricao'
 export default {
 components:{
     Week,
+    Jinricao
 },
 
 
@@ -110,4 +113,6 @@ components:{
     }
   }
 }
+
+
 </style>

@@ -27,7 +27,7 @@
     </main>
     <footer>
        <div class="down">
-         <li> 日常检查 </li>
+         <li > 日常检查 </li>
          <li @click="tonewly" class="middle"> <span class="middle_c">+</span> </li>
          <li> 吊装作业 </li>
        </div>

@@ -1,7 +1,7 @@
 <template>
   <div id="newlyAdded">
     <header>
-      <Classa :title="title" :goBackmsg='goBackmsg'/>
+      <Classa :title="title" :goBackmsg="goBackmsg" />
     </header>
     <main>
       <div class="main_title">
@@ -28,11 +28,13 @@
       <div class="table">
         <ul class="table_cell">
           <li>机械类别<span class="red">*</span></li>
-          <li @click="category" class="tojump">  {{jxlb?jxlb:'请选取>'}} </li>
+          <li @click="category" class="tojump">
+            {{ jxlb ? jxlb : "请选取>" }}
+          </li>
         </ul>
         <ul class="table_cell">
           <li>机械名称-型号<span class="red">*</span></li>
-          <li @click="names"  class="tojump">请选取></li>
+          <li @click="names" class="tojump">请选取></li>
         </ul>
         <ul class="table_cell">
           <li>项目设备编码<span class="red">*</span></li>
@@ -42,8 +44,8 @@
           <li>机械来源<span class="red">*</span></li>
           <li @click="source" class="tojump">请选取></li>
         </ul>
-        <ul class="table_cell">
-          <li>产权单位<span class="red">*</span></li>
+        <ul class="table_cell" @click="chanquan">
+          <li>产权单位<span class="red" >*</span></li>
           <li class="tojump">请选取></li>
         </ul>
         <ul class="table_cell">
@@ -107,48 +109,46 @@
         </ul>
         <p class="howUse">用途</p>
       </div>
-      <div class="save">
-        保存并继续
-      </div>
+      <div class="save">保存并继续</div>
     </main>
   </div>
 </template>
 
 <script>
-import Classa from '@/components/classA.vue'
+import Classa from "@/components/classA.vue";
 export default {
-  data () {
+  data() {
     return {
-      goBackmsg:'nume1',
-      title: '新增机械',
+      goBackmsg: "nume1",
+      title: "新增机械",
       whitap: 0,
       close: true,
       dialogVisible: false,
       value1: null,
-      jxlb:''
-    }
+      jxlb: "",
+    };
   },
-  mounted(){
-   this.jxlb=this.$route.params.name
+  mounted() {
+    this.jxlb = this.$route.params.name;
   },
   methods: {
-    category(){
-      this.$router.push({name:'category'})
+    chanquan() {
+      this.$router.push({ name: "chanquan" });
     },
-    names(){
-      this.$router.push({name:'names'})
+    category() {
+      this.$router.push({ name: "category" });
     },
-    source(){
-      this.$router.push({name:'source'})
-    }
-   
+    names() {
+      this.$router.push({ name: "names" });
+    },
+    source() {
+      this.$router.push({ name: "source" });
+    },
   },
   components: {
-    Classa
-  }
-
-
-}
+    Classa,
+  },
+};
 </script>
 
 <style lang='scss'>
@@ -238,7 +238,6 @@ export default {
       }
     }
     .dates {
-      
       padding: 25px;
       box-sizing: border-box;
       .dates_c {
@@ -255,14 +254,13 @@ export default {
           border: none;
         }
       }
-      .howUse{
+      .howUse {
         color: #999999;
         margin-top: 20px;
         font-size: 30px;
       }
     }
-    .save{
-      
+    .save {
       text-align: center;
       line-height: 91px;
       font-size: 40px;

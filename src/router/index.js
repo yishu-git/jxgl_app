@@ -6,11 +6,13 @@ import organ from '@/views/organization'
 import archives from '@/views/archives'
 import newlyAdded from '@/views/newlyAdded'
 import category from '@/views/newlyAdded/pages/category.vue'
+import weekly from '@/views/newlyAdded/pages/weekly.vue'
 import names from '@/views/newlyAdded/pages/names.vue'
 import source from '@/views/newlyAdded/pages/source.vue'
 import all from '@/views/subway/numes/pages/all.vue'
 import daishenhe from '@/views/subway/numes/pages/daishenhe.vue'
 import weishenbao from '@/views/subway/numes/pages/weishenbao.vue'
+import hoisting from '@/views/hoisting'
 Vue.use(VueRouter)
 const originalPush = VueRouter.prototype.push
 //修改原型对象中的push方法
@@ -33,6 +35,11 @@ const routes = [{
     path: '/archives',
     name: 'archives',
     component: archives
+  },
+  {
+    path: '/weekly',
+    name: 'weekly',
+    component: weekly
   },
   {
     path: '/newlyAdded',
@@ -74,7 +81,13 @@ const routes = [{
       name: 'weishenbao',
       component: weishenbao,
     },
+ 
   ]
+  },
+  {
+    path: 'hoisting',
+    name: 'hoisting',
+    component: hoisting, //吊装作业路由
   },
 ]
 

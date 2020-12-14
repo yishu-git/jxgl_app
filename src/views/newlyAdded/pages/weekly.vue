@@ -55,12 +55,12 @@ components:{
   display: flex;
   flex-direction: column;
   header {
+ 
     .title {
       padding: 40px 20px 30px 20px;
       font-size: 40px;
       align-items: center;
       color: #ffff;
-      height: 49px;
       display: flex;
       justify-content: space-between;
       background: #2988ff;

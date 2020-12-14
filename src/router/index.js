@@ -12,6 +12,7 @@ import source from '@/views/newlyAdded/pages/source.vue'
 import all from '@/views/subway/numes/pages/all.vue'
 import daishenhe from '@/views/subway/numes/pages/daishenhe.vue'
 import weishenbao from '@/views/subway/numes/pages/weishenbao.vue'
+import hoisting from '@/views/hoisting'
 Vue.use(VueRouter)
 const originalPush = VueRouter.prototype.push
 //修改原型对象中的push方法
@@ -80,7 +81,13 @@ const routes = [{
       name: 'weishenbao',
       component: weishenbao,
     },
+ 
   ]
+  },
+  {
+    path: 'hoisting',
+    name: 'hoisting',
+    component: hoisting, //吊装作业路由
   },
 ]
 

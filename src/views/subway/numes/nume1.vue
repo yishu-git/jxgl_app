@@ -29,7 +29,7 @@
        <div class="down">
          <li @click="inspection"> 日常检查 </li>
          <li @click="tonewly" class="middle"> <span class="middle_c">+</span> </li>
-         <li> 吊装作业 </li>
+         <li @click="hoisting"> 吊装作业 </li>
        </div>
     </footer>
   </div>
@@ -71,6 +71,10 @@ export default {
     toOrganization () {
       this.$router.push({ name: 'organ' })
       
+    },
+    // 点击跳转吊装作业
+    hoisting(){
+      this.$router.push({ name: 'hoisting' })
     }
 
   },

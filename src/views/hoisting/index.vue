@@ -17,7 +17,7 @@ export default {
   data() {
     return {
       title: "吊装作业情况",
-      goBackmsg: "subway",
+      goBackmsg: "nume1",
     };
   },
   components: {

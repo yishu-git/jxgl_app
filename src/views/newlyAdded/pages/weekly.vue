@@ -1,12 +1,25 @@
 <template>
   <div id="weekly">
-      ddddddddd
+      <header>
+
+      </header>
+      <main>
+        <Week/>
+      </main>
+      <footer>
+
+      </footer>
+      
   </div>
 </template>
 
-<script>
-export default {
 
+<script>
+import Week from '@/components/Week.vue'
+export default {
+components:{
+    Week,
+}
 }
 </script>
 
